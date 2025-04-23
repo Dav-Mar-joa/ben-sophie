@@ -50,10 +50,11 @@ body {
 
   .floatImage {
     position: absolute;
-    width: 80px;
+    width: 120px;
     transition: transform 1s ease;
     z-index: 1000;
     display: none;
+    border-radius:30%;
   }
   
   
