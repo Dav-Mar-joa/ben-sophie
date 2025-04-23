@@ -14,7 +14,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     border-radius: 20px;
-    max-width: 90%;
+    min-width: 70%;
   }
   
   button {
@@ -32,19 +32,30 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     flex-wrap: wrap;
   }
   
   .gain {
-    width: 80px;
+    width: 3rem;
     height: auto;
     transition: transform 0.5s ease;
+    border: 2px solid green;
+    border-radius: 10px;
   }
   
   .animate {
     animation: spin 2s linear infinite, move 5s linear infinite alternate;
   }
+
+  .floatImage {
+    position: absolute;
+    width: 80px;
+    transition: transform 1s ease;
+    z-index: 1000;
+    display: none;
+  }
+  
   
   @keyframes spin {
     from { transform: rotate(0deg); }
@@ -61,7 +72,8 @@ body {
   
   @media (max-width: 600px) {
     .gain {
-      width: 60px;
+      height: 6rem;
+      width: auto;
     }
   }
   
