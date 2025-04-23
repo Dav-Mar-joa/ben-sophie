@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 90%;
+  }
+  
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff9900;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .gains {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .gain {
+    width: 80px;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .animate {
+    animation: spin 2s linear infinite, move 5s linear infinite alternate;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes move {
+    0%   { transform: translateX(0) translateY(0); }
+    25%  { transform: translateX(20px) translateY(10px); }
+    50%  { transform: translateX(-20px) translateY(20px); }
+    75%  { transform: translateX(30px) translateY(-10px); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @media (max-width: 600px) {
+    .gain {
+      width: 60px;
+    }
+  }
+  
