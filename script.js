@@ -18,14 +18,17 @@ document.getElementById("clickBtn").addEventListener("click", () => {
     container.style.background = colors[colorIndex];
     colorIndex = (colorIndex + 1) % colors.length;
   }, 1000); // change toutes les 1 seconde
+
+  titreH1.innerHTML = " 🤣 PERDU !!! 🤣";
+
   
-  titreH1.innerHTML = "PERDU !!!";
-
-  const sophie = document.getElementById("sophie");
   const ben = document.getElementById("ben");
+  const sophie = document.getElementById("sophie");
+  setTimeout(() => {
+    
+    ben.style.display = "block";
+    sophie.style.display = "block";
 
-  sophie.style.display = "block";
-  ben.style.display = "block";
 
   // On enregistre les tailles d'origine UNE SEULE FOIS
   const benInitialWidth = ben.getBoundingClientRect().width;
@@ -58,4 +61,5 @@ document.getElementById("clickBtn").addEventListener("click", () => {
   //     img.classList.add("animate");
   //   }
   // });
+}, 2000);
 });
